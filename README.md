@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student template
 
 ## Purpose of this repository
@@ -11,3 +12,6 @@ and LICENSE file.
 Source code folder contains a separate license file that must **NOT** be removed under any circumstances!
 Removing this license file directly violates terms and conditions of the software under testing.
 Individuals who remove or modify the license file will also carry the consequences.
+=======
+# Software-Testing-Project
+>>>>>>> d73e6529aaa819115bb289c3d69c9bace6cc4a6d
