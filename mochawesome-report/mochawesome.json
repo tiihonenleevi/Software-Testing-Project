@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 8,
+    "tests": 6,
     "passes": 6,
     "pending": 0,
-    "failures": 2,
-    "start": "2025-12-05T06:54:26.128Z",
-    "end": "2025-12-05T06:54:26.138Z",
-    "duration": 10,
-    "testsRegistered": 8,
-    "passPercent": 75,
+    "failures": 0,
+    "start": "2025-12-05T06:59:40.535Z",
+    "end": "2025-12-05T06:59:40.542Z",
+    "duration": 7,
+    "testsRegistered": 6,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c463fecc-0253-4be0-b39f-3408033c5738",
+      "uuid": "efd6c960-d6f3-47bf-aa9a-9672894f7e54",
       "title": "",
       "fullFile": "C:\\SoftwareTesting\\test\\add.test.js",
       "file": "\\test\\add.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7f130127-f681-468f-92b3-06689c96c7d5",
+          "uuid": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
           "title": "Test Suite for add.js",
           "fullFile": "C:\\SoftwareTesting\\test\\add.test.js",
           "file": "\\test\\add.test.js",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "expect(add(2, 2)).to.equal(4);",
               "err": {},
-              "uuid": "7b040b9d-e499-4673-a3c6-47c2fa2a9720",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
+              "uuid": "45de9df2-7e38-4237-b210-b159d2f9e5ba",
+              "parentUUID": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "expect(add(5, -3)).to.equal(2);",
               "err": {},
-              "uuid": "d85d0c02-0025-4236-a796-ad7f95f455dd",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
+              "uuid": "f661c81e-1ef4-49f9-a041-6f0288db965f",
+              "parentUUID": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "expect(add(undefined, 7)).to.equal(7);\nexpect(add(10, undefined)).to.equal(10);",
               "err": {},
-              "uuid": "1dc78934-14db-4349-b3ba-8efd1afc12d5",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
+              "uuid": "78973955-9aa5-424e-9a41-b65c803fb009",
+              "parentUUID": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
               "isHook": false,
               "skipped": false
             },
@@ -101,52 +101,8 @@
               "context": null,
               "code": "expect(add(undefined, undefined)).to.equal(0);",
               "err": {},
-              "uuid": "4edce3f5-54ea-4282-9d75-5b757c188ed1",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should handle string inputs that can be converted to numbers",
-              "fullTitle": "Test Suite for add.js should handle string inputs that can be converted to numbers",
-              "timedOut": false,
-              "duration": 1,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "expect(add('4', '6')).to.equal(10);\nexpect(add('3', 7)).to.equal(10);\nexpect(add(5, '5')).to.equal(10);",
-              "err": {
-                "message": "AssertionError: expected '46' to equal 10",
-                "estack": "AssertionError: expected '46' to equal 10\n    at Context.<anonymous> (file:///C:/SoftwareTesting/test/add.test.js:24:34)\n    at process.processImmediate (node:internal/timers:504:21)",
-                "diff": null
-              },
-              "uuid": "68ef1435-f3d8-4fce-9e96-de537fe7fc4e",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "should handle non-numeric strings by treating them as NaN",
-              "fullTitle": "Test Suite for add.js should handle non-numeric strings by treating them as NaN",
-              "timedOut": false,
-              "duration": 0,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "expect(add('a', 5)).to.be.NaN;\nexpect(add(5, 'b')).to.be.NaN;\nexpect(add('x', 'y')).to.be.NaN;",
-              "err": {
-                "message": "AssertionError: expected 'a5' to be NaN",
-                "estack": "AssertionError: expected 'a5' to be NaN\n    at Context.<anonymous> (file:///C:/SoftwareTesting/test/add.test.js:30:34)\n    at process.processImmediate (node:internal/timers:504:21)",
-                "diff": null
-              },
-              "uuid": "a536dd71-7cab-4e9b-b5f4-ab4fc4f05acc",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
+              "uuid": "241a2085-dd14-4a78-9e85-bc6184aee0fc",
+              "parentUUID": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
               "isHook": false,
               "skipped": false
             },
@@ -163,8 +119,8 @@
               "context": null,
               "code": "expect(add(null, 5)).to.equal(5);\nexpect(add(5, null)).to.equal(5);\nexpect(add(null, null)).to.equal(0);",
               "err": {},
-              "uuid": "fb1da528-77db-48a8-89fa-557b118e4317",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
+              "uuid": "ac0bf321-648f-4769-a23d-b29530a69cde",
+              "parentUUID": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
               "isHook": false,
               "skipped": false
             },
@@ -181,28 +137,25 @@
               "context": null,
               "code": "expect(add(-4, -6)).to.equal(-10);",
               "err": {},
-              "uuid": "4a8b8652-9bcd-463b-b097-9737aa638cce",
-              "parentUUID": "7f130127-f681-468f-92b3-06689c96c7d5",
+              "uuid": "18b29c9e-56b2-47fb-aa3d-c9f00b67e50e",
+              "parentUUID": "d902cfa8-6306-4a8a-b67b-46d6a9ed1a59",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7b040b9d-e499-4673-a3c6-47c2fa2a9720",
-            "d85d0c02-0025-4236-a796-ad7f95f455dd",
-            "1dc78934-14db-4349-b3ba-8efd1afc12d5",
-            "4edce3f5-54ea-4282-9d75-5b757c188ed1",
-            "fb1da528-77db-48a8-89fa-557b118e4317",
-            "4a8b8652-9bcd-463b-b097-9737aa638cce"
+            "45de9df2-7e38-4237-b210-b159d2f9e5ba",
+            "f661c81e-1ef4-49f9-a041-6f0288db965f",
+            "78973955-9aa5-424e-9a41-b65c803fb009",
+            "241a2085-dd14-4a78-9e85-bc6184aee0fc",
+            "ac0bf321-648f-4769-a23d-b29530a69cde",
+            "18b29c9e-56b2-47fb-aa3d-c9f00b67e50e"
           ],
-          "failures": [
-            "68ef1435-f3d8-4fce-9e96-de537fe7fc4e",
-            "a536dd71-7cab-4e9b-b5f4-ab4fc4f05acc"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2,
+          "duration": 1,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
