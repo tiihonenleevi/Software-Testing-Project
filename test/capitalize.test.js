@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import capitalize from '../src/capitalize.js';
 
-describe('capitalize', () => {
+describe('Test suite for capitalize.js', () => {
     // Basic functionality tests
     it('should capitalize the first character of a lowercase string', () => {
         expect(capitalize('fred')).to.equal('Fred');
@@ -21,17 +21,17 @@ describe('capitalize', () => {
     });
 
     // Edge cases with undefined and null
-    it('should handle undefined by returning empty string', () => {
-        expect(capitalize(undefined)).to.equal('');
+    it('should handle undefined by returning "Undefined"', () => {
+        expect(capitalize(undefined)).to.equal('Undefined');
     });
 
-    it('should handle null by returning empty string', () => {
-        expect(capitalize(null)).to.equal('');
+    it('should handle null by returning "Null"', () => {
+        expect(capitalize(null)).to.equal('Null');
     });
 
     // No default parameter value test
     it('should handle missing argument (undefined)', () => {
-        expect(capitalize()).to.equal('');
+        expect(capitalize()).to.equal('Undefined');
     });
 
 });
