@@ -19,7 +19,8 @@ describe('Test Suite for add.js', () => {
         expect(add(undefined, undefined)).to.equal(0);
     });
 
-    // createMathOperation yhdistää merkkijonot eli '4' + '6' = '46'. En tiedä onko haluttu toiminnallisuus.
+    // createMathOperation yhdistää merkkijonot eli '4' + '6' = '46'. Emme tiedä onko tämä haluttu toiminnallisuus.
+    // createMathOperation combines strings, so '4' + '6' = '46'. We don't know if this is the desired functionality.
     it('should handle string inputs that can be converted to numbers', () => {
         expect(add('4', '6')).to.equal(10);
         expect(add('3', 7)).to.equal(10);

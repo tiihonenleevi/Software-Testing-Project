@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.95% </span>
+                <span class="strong">47.82% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>40/46</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">30% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>3/10</span>
+                <span class='fraction'>22/46</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
+                <span class="quiet">Branches</span>
                 <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">86.95% </span>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">47.82% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>40/46</span>
+                <span class='fraction'>22/46</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -129,30 +129,30 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
@@ -175,30 +175,30 @@
  * _.slice(array, 2)
  * // =&gt; [3, 4]
  */
-function slice(array, start, end) {
-  let length = array == null <span class="branch-0 cbranch-no" title="branch not covered" >? 0 </span>: array.length
-  if (!length) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function slice(array, start, end) {</span></span>
+<span class="cstat-no" title="statement not covered" >  let length = array == null ? 0 : array.length</span>
+<span class="cstat-no" title="statement not covered" >  if (!length) {</span>
 <span class="cstat-no" title="statement not covered" >    return []</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-  start = start == null <span class="branch-0 cbranch-no" title="branch not covered" >? 0 </span>: start
-  end = end === undefined <span class="branch-0 cbranch-no" title="branch not covered" >? length </span>: end
-&nbsp;
-  if (start &lt; 0) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  start = start == null ? 0 : start</span>
+<span class="cstat-no" title="statement not covered" >  end = end === undefined ? length : end</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  if (start &lt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >    start = -start &gt; length ? 0 : (length + start)</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-  if (end &lt; 0) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  if (end &lt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >    end += length</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-  length = start &gt; end <span class="branch-0 cbranch-no" title="branch not covered" >? 0 </span>: ((end - start) &gt;&gt;&gt; 0)
-  start &gt;&gt;&gt;= 0
-&nbsp;
-  let index = -1
-  const result = new Array(length)
-  while (++index &lt; length) {
-    result[index] = array[index + start]
-  }
-  return result
-}
+<span class="cstat-no" title="statement not covered" >  length = start &gt; end ? 0 : ((end - start) &gt;&gt;&gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >  start &gt;&gt;&gt;= 0</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  let index = -1</span>
+<span class="cstat-no" title="statement not covered" >  const result = new Array(length)</span>
+<span class="cstat-no" title="statement not covered" >  while (++index &lt; length) {</span>
+<span class="cstat-no" title="statement not covered" >    result[index] = array[index + start]</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >  return result</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
 export default slice
 &nbsp;</pre></td></tr></table></pre>
@@ -208,7 +208,7 @@ export default slice
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-05T15:12:57.089Z
+                at 2025-12-10T19:15:38.069Z
             </div>
         <script src="../prettify.js"></script>
         <script>
