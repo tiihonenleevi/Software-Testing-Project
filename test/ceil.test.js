@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import ceil from '../src/ceil.js'
 
-describe('ceil', () => {
+describe('Test suite for ceil.js according to the test plan', () => {
     it('should round up to nearest integer when precision is not provided', () => {
         expect(ceil(4.006)).to.equal(5)
         expect(ceil(4.1)).to.equal(5)

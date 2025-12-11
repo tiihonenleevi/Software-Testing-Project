@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import add from '../src/add.js';
 
-describe('Test suite for add.js', () => {
+describe('Test suite for add.js according to the test plan', () => {
     it('should add two positive numbers correctly', () => {
         expect(add(2, 2)).to.equal(4);
     });
