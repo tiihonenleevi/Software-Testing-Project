@@ -30,11 +30,13 @@ jobs:
 
     # Runs tests with coverage (c8)
     - name: Run tests with coverage
-      run: npm run coverage || true
+      run: npm run coverage
+      continue-on-error: true
 
     # Sends coverage to Coveralls
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v2
+      continue-on-error: true
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         file: ./coverage/lcov.info
