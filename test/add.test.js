@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import add from '../src/add.js';
 
-describe('Test Suite for add.js', () => {
+describe('Test suite for add.js', () => {
     it('should add two positive numbers correctly', () => {
         expect(add(2, 2)).to.equal(4);
     });
@@ -19,7 +19,7 @@ describe('Test Suite for add.js', () => {
         expect(add(undefined, undefined)).to.equal(0);
     });
 
-    // createMathOperation yhdistää merkkijonot eli '4' + '6' = '46'. En tiedä onko haluttu toiminnallisuus.
+    // createMathOperation combines strings, so '4' + '6' = '46'. We don't know if this is the desired functionality.
     it('should handle string inputs that can be converted to numbers', () => {
         expect(add('4', '6')).to.equal(10);
         expect(add('3', 7)).to.equal(10);

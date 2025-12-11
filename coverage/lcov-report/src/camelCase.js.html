@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/ceil.js</title>
+    <title>Code coverage report for src/camelCase.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> ceil.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> camelCase.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>24/24</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>24/24</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
@@ -87,7 +87,14 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -111,30 +118,44 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import createRound from './.internal/createRound.js'
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import upperFirst from './upperFirst.js'
+import words from './words.js'
+import toString from './toString.js'
 &nbsp;
 /**
- * Computes `number` rounded up to `precision`. (Round up: the smallest integer greater than or equal to a given number.)
+ * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
  *
- * @since 3.10.0
- * @category Math
- * @param {number} number The number to round up.
- * @param {number} [precision=0] The precision to round up to.
- * @returns {number} Returns the rounded up number.
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the camel cased string.
+ * @see lowerCase, kebabCase, snakeCase, startCase, upperCase, upperFirst
  * @example
  *
- * ceil(4.006)
- * // =&gt; 5
+ * camelCase('Foo Bar')
+ * // =&gt; 'fooBar'
  *
- * ceil(6.004, 2)
- * // =&gt; 6.01
+ * camelCase('--foo-bar--')
+ * // =&gt; 'fooBar'
  *
- * ceil(6040, -2)
- * // =&gt; 6100
+ * camelCase('__FOO_BAR__')
+ * // =&gt; 'fooBar'
  */
-const ceil = createRound('ceil')
+const camelCase = (string) =&gt; (
+  words(toString(string).replace(/['\u2019]/g, '')).reduce((result, word, index) =&gt; {
+    word = word.toLowerCase()
+    return result + (index ? upperFirst(word) : word)
+  }, ' ')
+)
 &nbsp;
-export default ceil
+export default camelCase
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
