@@ -28,9 +28,14 @@ describe('Test suite for words.js', () => {
       expect(result).to.deep.equal([]);
     });
 
-    it('should handle strings with numbers', () => {
+    it('should handle strings with numbers at the end of words', () => {
       const result = words('test123 hello456');
       expect(result).to.deep.equal(['test123', 'hello456']);
+    });
+
+    it('should handle strings with numbers in the middle of words', () => {
+      const result2 = words('test123test hello456hello');
+      expect(result2).to.deep.equal(['test123test', 'hello456hello']);
     });
 
     it('should handle camelCase strings', () => {
