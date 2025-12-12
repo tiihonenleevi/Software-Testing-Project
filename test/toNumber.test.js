@@ -80,6 +80,18 @@ describe('Test suite for toNumber.js', () => {
       expect(toNumber(obj)).to.equal(42);
     });
 
+    it('should handle objects whose valueOf is not a function', () => {
+      const obj = { valueOf: 123 };
+      expect(Number.isNaN(toNumber(obj))).to.be.true;
+    });
+
+    it('should return 0 when object valueOf returns 0', () => {
+      const obj = {
+        valueOf() { return 0; }
+      };
+      expect(toNumber(obj)).to.equal(0);
+    });
+
     it('should convert object to string when valueOf returns an object', () => {
       const obj = {
         valueOf() { return { toString() { return '99'; } }; }
