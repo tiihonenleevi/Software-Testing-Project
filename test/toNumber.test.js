@@ -82,12 +82,7 @@ describe('Test suite for toNumber.js', () => {
 
     it('should convert object to string when valueOf returns an object', () => {
       const obj = {
-        valueOf() {
-          return {};
-        },
-        toString() {
-          return '99';
-        }
+        valueOf() { return { toString() { return '99'; } }; }
       };
       expect(toNumber(obj)).to.equal(99);
     });
